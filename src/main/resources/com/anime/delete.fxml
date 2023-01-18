@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.anime.DeleteController">
+   <children>
+      <ToolBar accessibleRole="BUTTON" nodeOrientation="LEFT_TO_RIGHT" prefHeight="34.0" prefWidth="466.0">
+         <items>
+            <Button mnemonicParsing="false" onAction="#switchToList" prefHeight="24.0" prefWidth="97.0" text="Listar" />
+            <Button mnemonicParsing="false" onAction="#switchToRegistration" prefHeight="24.0" prefWidth="100.0" text="Cadastrar" />
+            <Button mnemonicParsing="false" onAction="#switchToUpdate" prefHeight="24.0" prefWidth="100.0" text="Atualizar" />
+         </items>
+      </ToolBar>
+      <Label alignment="CENTER" prefHeight="26.0" prefWidth="702.0" text="DELETAR ANIME" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="TOP_CENTER" prefHeight="238.0" prefWidth="320.0">
+         <children>
+            <VBox prefHeight="238.0" prefWidth="133.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="100.0" text="POR ID:" />
+                  <TextField fx:id="txtID" prefHeight="30.0" prefWidth="215.0" />
+                  <VBox alignment="CENTER" prefHeight="180.0" prefWidth="212.0">
+                     <children>
+                        <Button layoutX="272.0" layoutY="46.0" mnemonicParsing="false" onAction="#deleteById" text="Deletar" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <Label fx:id="lblMensage" alignment="CENTER" prefHeight="97.0" prefWidth="603.0" />
+   </children>
+</VBox>
